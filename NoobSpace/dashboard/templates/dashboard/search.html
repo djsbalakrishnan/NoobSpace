@@ -1,0 +1,23 @@
+
+	{% for hostname, value in list.items %}
+		<div class="post">
+			<div class="row">
+				<h4> <strong> {{value.0}} </strong> </h4>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<p>
+						{{value.1}}
+					</p>
+					<br/>
+					Learn more from <a href={{value.2}} target="_blank">here</a>
+				</div>
+				<div class="col-lg-4">
+					<p style="text-align:center"> <strong>{{value.3}} </strong> </p>
+				</div>
+			</div>
+			<div class="row">
+				<hr>
+			</div>
+		</div>
+	{% endfor %}

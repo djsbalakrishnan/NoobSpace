@@ -3,16 +3,20 @@
 {% block content %}
 	<div class="container" style="padding-top:50px">
 		<div class="row">
-			<div class="col-lg-12">
-				<h3 style="text-align:center">It Begins Here</h3>
+			<div class="col-lg-6">
+				<h3 style="text-align:center">List just for you!</h3>
 			</div>
-			<!--
-			<div class="col-lg-offset-2 col-lg-4">
-				<h3 style="text-align:center">Search Feature</h3>
+			
+			<div class="col-lg-4">
+				<input type="text" class="form-control" id="search-text" placeholder="Search for Tags!" style="margin-top:20px">
 			</div>
-			-->
+			<div class="col-lg-2">
+				<button class="btn btn-success form-control" type="button" id="search-button" onclick="search()" style="margin-top:20px">
+            		Search
+            	</button>
+			</div>
 		</div>
-		<div id="post-list">
+		<div id="post-list" class="container" style="padding-top:20px">
 			{% for hostname, value in list.items %}
 				<div class="post">
 					<div class="row">
@@ -37,4 +41,6 @@
 			{% endfor %}
 		</div>
 	</div>
+
+	
 {% endblock %}

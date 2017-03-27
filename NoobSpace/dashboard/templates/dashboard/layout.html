@@ -18,8 +18,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'dashboard/content/dashboard.css' %}" />
     <script src="{% static 'dashboard/scripts/jquery.js' %}"></script>
     <script src="{% static 'dashboard/scripts/bootstrap.min.js' %}"></script>
+    <script src="{% static 'dashboard/scripts/dashboard.js' %}"></script>
     
-
 </head>
 
 <body>
@@ -36,26 +36,18 @@
               <b class="navbar-brand"><a href="/">NoobSpace</a></b>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling 
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="hidden">
                     <a href="#page-top"></a>
                   </li>
+                  
                   <li>
-                    <a href="virtual_environment.html">Virtual Env</a>
-                  </li>
-                  <li>
-                    <a href="remote.html">Content Movement</a>
-                  </li>
-                  <li>
-                    <a href="spin_vm.html">Add | Remove</a>
-                  </li>
-                  <li>
-                    <a href="server_details.html">Server Details</a>
+                    <a href="admin/">Admin</a>
                   </li>
                 </ul>
-            </div> -->
+            </div> 
         </div>
     </nav>
 {% block content %}{% endblock %}
