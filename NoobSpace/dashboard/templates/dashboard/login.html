@@ -9,19 +9,90 @@
 	    <title>
 	      NoobSpace
 	    </title>
+	    {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'dashboard/content/bootstrap.min.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'dashboard/content/dashboard.css' %}" />
+		<script src="{% static 'dashboard/scripts/jquery.js' %}"></script>
+		<script src="{% static 'dashboard/scripts/bootstrap.min.js' %}"></script>
+		<script src="{% static 'dashboard/scripts/dashboard.js' %}"></script>
 	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-offset-3 col-lg-6 col-xs-12">
-					<h2 style="">Login Here</h2>
-				</div>
+	<!-- should add a background color for the page -->
+	<body style="background-color:#3c6478">
+		<div class="container" id="login-page">
+		<div class="row">
+			<div class="col-lg-offset-4 col-lg-4">
+				<h2 style="text-align: center; color: #ffffff; ">NoobSpace</h2>
 			</div>
-			<div class="row">
-				<div class="col-lg-offser-3">
+		</div>
+
+    	<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="panel panel-login">
 					
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<!-- Login page -->
+								<form id="login-form" action="home" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="submit" name="login-submit" id="login-submit" tabindex="3" class="form-control btn btn-login" value="Log In">
+									</div>
+									<div class="row">
+										<div class="col-lg-offset-4 col-lg-4">
+											<a href = "#" style="text-align:center; "> Forgot Password ? </a>
+										</div>
+									</div>
+								</form>
+
+								<!-- Register page -->
+								<form id="register-form" action="home" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="text" name="fname" id="fname" tabindex="1" class="form-control" placeholder="First Name" value="">
+									</div>
+									<div class="form-group">
+										<input type="text" name="lname" id="lname" tabindex="1" class="form-control" placeholder="Last Name" value="">
+									</div>								
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+									</div>
+								</form>
+							
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</body>
 </html>

@@ -18,7 +18,8 @@ from django.contrib import admin
 from dashboard import views
 
 urlpatterns = [
-	url(r'^$', views.home, name='home'),
+	url(r'^$', views.login, name='login'),
+    url(r'^home/$', views.home, name='home'),
 	url(r'^search/$', views.search, name='search'),
     url(r'^admin/', admin.site.urls),
 ]

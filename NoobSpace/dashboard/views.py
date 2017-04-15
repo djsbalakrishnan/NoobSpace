@@ -5,6 +5,10 @@ from django.template import RequestContext
 from django.template.loader import render_to_string
 
 # Create your views here.
+
+def login(request):
+	return render(request, 'dashboard/login.html')
+
 def home(request):
 	d = {}
 	for obj in Posts.objects.all():
